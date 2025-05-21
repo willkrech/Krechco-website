@@ -1,0 +1,225 @@
+<!DOCTYPE html><!--  Last Published: Wed May 21 2025 01:59:04 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="66aa98bcddb01c1c4069aeaf" data-wf-site="66062a8b5e1b01c5af4bb2a9">
+<head>
+  <meta charset="utf-8">
+  <title>KrechCo</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/krech.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Instrument Sans:regular,500,600,700"]  }});</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon"><!--  Include jsPDF and html2canvas from CDN  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <div id="content" class="div-block-5">
+    <div class="invoice-padding">
+      <div class="flex-horizontal padding-bottom padding-invoice">
+        <a id="download" href="#" class="w-inline-block">
+          <div class="invoice-logo w-embed"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100%" viewbox="0 0 43.306 41.32">
+              <defs>
+                <clippath id="clip-path">
+                  <rect id="Rectangle_1" data-name="Rectangle 1" width="43.306" height="41.319" transform="translate(0 0.001)" fill="none"></rect>
+                </clippath>
+              </defs>
+              <g id="Group_3" data-name="Group 3" transform="translate(0 0)">
+                <path id="Path_1" data-name="Path 1" d="M0,0V41.32H15.822V0Z" fill="currentColor"></path>
+                <g id="Group_2" data-name="Group 2">
+                  <g id="Group_1" data-name="Group 1" clip-path="url(#clip-path)">
+                    <path id="Path_2" data-name="Path 2" d="M41.844,11.247,30.656.059,19.284,11.433C8.256,22.462,16.067,41.32,31.664,41.32h9.655V25.5H27.593Z" fill="currentColor"></path>
+                  </g>
+                </g>
+              </g>
+            </svg></div>
+        </a>
+        <div class="flex-vertical">
+          <div class="date w-embed w-script">
+            <script>
+    function getCurrentFormattedDate() {
+        const today = new Date();
+        const day = String(today.getDate()).padStart(2, '0');
+        const month = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+        const year = today.getFullYear();
+        return `${month}.${day}.${year}`;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        const dateElement = document.getElementById('current-date');
+        if (dateElement) {
+            dateElement.textContent = getCurrentFormattedDate();
+        }
+    });
+</script>
+            <!--  In your HTML where you want to display the date  -->
+            <div id="current-date"></div>
+          </div>
+          <div class="code-embed w-embed"><svg xmlns="http://www.w3.org/2000/svg" id="a" width="100%" height="auto" viewbox="0 0 33.1409365 14.254303">
+              <path d="M16.5704683,0C7.2785581,0,0,3.1305611,0,7.1270816s7.2785581,7.1272214,16.5704683,7.1272214,16.5704683-3.1307009,16.5704683-7.1272214S25.8623784,0,16.5704683,0ZM32.5508384,6.8408972h-2.5713277c-.1616425-2.1597281-2.1414398-4.0741976-5.147721-5.324857,4.4462164,1.1030257,7.4810043,3.0677836,7.7190487,5.324857ZM16.2842664,6.8408972H6.8787489c.2186034-3.4177936,4.3289059-6.1635149,9.4055175-6.2636201v6.2636201ZM16.2842664,7.413266v6.2636201c-5.0766116-.1001052-9.1869141-2.8458265-9.4055175-6.2636201h9.4055175ZM16.8566352,7.413266h9.4055524c-.2186034,3.417811-4.3289059,6.1635149-9.4055524,6.2636201v-6.2636201ZM16.8566352,6.8408972V.5772771c5.0766465.1001052,9.1869491,2.845809,9.4055524,6.2636201h-9.4055524ZM6.3061006,6.8408972h-2.571747c.2033195-2.4002878,2.9489011-4.4687841,6.8948712-5.523076-2.5147861,1.2410873-4.1926609,3.2457755-4.3231242,5.523076ZM6.3061006,7.413266c.1304459,2.2771957,1.808181,4.2818315,4.32274,5.5229887-3.9457605-1.0543094-6.6911674-3.1227882-6.8944869-5.5229887h2.571747ZM26.8348359,7.413266h2.571747c-.2033195,2.4002005-2.9487264,4.4686793-6.8944869,5.5229887,2.514559-1.2411572,4.1922941-3.245793,4.32274-5.5229887ZM26.8348359,6.8408972c-.1304633-2.2773005-1.8083382-4.2819887-4.3231242-5.523076,3.9459701,1.0542919,6.6915517,3.1227882,6.8948712,5.523076h-2.571747ZM8.3091469,1.5160402c-3.0062812,1.2506594-4.9860785,3.1651289-5.147721,5.324857H.5900981c.2380445-2.2570734,3.2728324-4.2218313,7.7190487-5.324857ZM.5900981,7.413266h2.5713277c.1616425,2.1596233,2.1412302,4.0740404,5.1472494,5.3247522C3.8627209,11.6349576.8281252,9.6702521.5900981,7.413266ZM24.8322613,12.7380182c3.0060192-1.2507118,4.9856069-3.1651289,5.1472494-5.3247522h2.5713277c-.238027,2.256986-3.2726228,4.2216916-7.7185771,5.3247522Z" style="fill:CurrentColor; stroke-width:0px;"></path>
+            </svg></div>
+        </div>
+      </div>
+      <div class="flex-horizontal position-relative">
+        <h1 class="invoice-heading1">Invoice</h1>
+        <h1 class="invoice-heading1 w-dyn-bind-empty"></h1>
+        <div class="gray-bar"></div>
+      </div>
+      <div class="flex-horizontal position-relative padding-bottom">
+        <h1 id="clientname" class="invoice-heading2 w-dyn-bind-empty"></h1>
+        <h1 id="clientname" class="invoice-heading2 w-dyn-bind-empty"></h1>
+      </div>
+      <div class="service-bar">
+        <div>Services</div>
+      </div>
+      <div class="flex-horizontal">
+        <div class="w-layout-vflex">
+          <div class="w-dyn-bind-empty w-richtext"></div>
+          <div class="padding-bottom padding-medium color-half w-dyn-bind-empty"></div>
+        </div>
+        <div class="money tag w-dyn-bind-empty"></div>
+      </div>
+      <div class="flex-horizontal">
+        <div class="w-dyn-bind-empty w-richtext"></div>
+        <div class="money tag w-dyn-bind-empty"></div>
+      </div>
+      <div class="flex-horizontal">
+        <div class="w-dyn-bind-empty w-richtext"></div>
+        <div class="money tag w-dyn-bind-empty"></div>
+      </div>
+      <div class="flex-vertical twothirds padding-top">
+        <div class="service-bar hours">
+          <div>Hours</div>
+        </div>
+        <div class="flex-horizontal full-width">
+          <div class="half w-dyn-bind-empty w-richtext"></div>
+          <div id="add" class="half w-dyn-bind-empty w-richtext"></div>
+        </div>
+        <div class="flex-horizontal full-width bottom-gray">
+          <div class="half">Total Hours</div>
+          <div id="hours" class="half">##</div>
+        </div>
+      </div>
+      <div class="flex-horizontal bottom-final">
+        <div>
+          <div class="padding-bottom padding-small">Total Price</div>
+          <h1 id="finalprice" class="invoice-heading1 money">$00.00</h1>
+        </div>
+        <div>Make Payment out to Krech.Co</div>
+      </div>
+    </div>
+    <div class="invoice-padding bottom-gray">
+      <div class="flex-horizontal top">
+        <div class="flex-horizontal small-padding">
+          <div>Brightwood LLC<br>302 Pebble Beach Dr<br>Cave Springs, AR 72718</div>
+          <div>(901) 212-9652<br>willkrech@gmail.com<br>krech.co</div>
+        </div>
+        <div class="footer-logo-small w-embed"><svg xmlns="http://www.w3.org/2000/svg" id="a" width="100%" height="auto" viewbox="0 0 55.2228637 10.2517543">
+            <path d="M1.2633831,0v5.7648125L6.3892603,0h1.5392026l-3.7173405,4.2836527,4.0077404,5.880991h-1.5102276l-3.4268478-4.922588-2.0184041,2.2798289v2.6427591H0V0h1.2633831Z" style="fill:#f04d00; stroke-width:0px;"></path>
+            <path d="M12.8508652,3.9206297h-.59538c-.7066365,0-1.2124912.2371862-1.5173785.7115585-.3049802.4743723-.4573774,1.0600011-.4573774,1.7570721v3.7753834h-1.19076V2.7590304h1.0310261l.1597338,1.1180439c.2129475-.3387843.4888598-.6098675.8276441-.8131566s.8083275-.3048873,1.4085366-.3048873h.3339551v1.1615993Z" style="fill:#f04d00; stroke-width:0px;"></path>
+            <path d="M14.9419853,3.1437846c.532508-.3146385,1.1423755-.4718649,1.8296953-.4718649.6775686,0,1.2777778.1403243,1.8005346.4210658s.9341643.6873198,1.2343153,1.219735c.3000581.5324151.459792,1.156863.4792015,1.8732506,0,.1064273-.0097512.2758195-.0290678.5081765h-5.7502321v.101691c.0193166.726046.2420153,1.3068456.6679103,1.7424918.4259878.4356462.9825488.6534228,1.6698686.6534228.532508,0,.9850562-.1330806,1.3577375-.3993346s.6219404-.6365207.7478701-1.1108002h1.2051546c-.1451535.7550209-.5081765,1.372225-1.089069,1.8513337-.5807996.4792015-1.2923581.7188022-2.1344897.7188022-.7357972,0-1.3795616-.1573192-1.9312934-.4719577-.5518247-.3145456-.9801342-.7598501-1.2851144-1.3359135-.3049802-.5759705-.4573774-1.236637-.4573774-1.9820925,0-.7550209.1475681-1.4181949.4428899-1.9893363.295229-.5711413.709051-1.0140312,1.2414662-1.3286697ZM18.3471948,4.2400974c-.4115003-.3484426-.9317497-.5227568-1.5610267-.5227568-.561483,0-1.055172.1839725-1.4811598.5518247-.425895.3678521-.6679103.8470536-.726046,1.4376045h4.4724544c-.0580428-.629277-.2928144-1.1181368-.7042219-1.4666723Z" style="fill:#f04d00; stroke-width:0px;"></path>
+            <path d="M24.9904505,10.2517543c-.7163877,0-1.3456646-.1597338-1.8877381-.4792015s-.9632321-.7671867-1.2632903-1.3431572c-.300151-.5759705-.4501336-1.2367299-.4501336-1.9820925s.1523972-1.4037075.4573774-1.9748488.7332897-1.0140312,1.2851144-1.3286697c.5517318-.3146385,1.1858379-.4718649,1.9022256-.4718649.8711994,0,1.5900017.2322641,2.1563138.6969781.5663121.4646211.9220914,1.1035564,1.0673377,1.9167131h-1.2052475c-.1161785-.4742795-.3581938-.8518828-.726046-1.1326243s-.8131566-.4210658-1.3359135-.4210658c-.7067293,0-1.2802852.2516736-1.7207605.7550209-.4404753.5034402-.6606665,1.156863-.6606665,1.9603613,0,.8131566.2201912,1.4738232.6606665,1.9820925s1.0140312.7623576,1.7207605.7623576c.5420735,0,.9970363-.1404172,1.3649813-.4211587.3678521-.2806486.6050383-.6679103.7114656-1.1615993h1.19076c-.1549047.822815-.5179277,1.468994-1.089069,1.9385372-.5711413.4694503-1.2971873.7042219-2.1781379.7042219Z" style="fill:#f04d00; stroke-width:0px;"></path>
+            <path d="M36.2730452,6.0407248v4.1239189h-1.1906671v-4.0512957c0-.7647721-.1742213-1.3480792-.5227568-1.7498284s-.8470536-.6025309-1.4956473-.6025309c-.6873198,0-1.2319007.2419225-1.633557.7259531-.4017492.4840307-.6026237,1.1423755-.6026237,1.9748488v3.702853h-1.19076V0h1.19076v3.9787654c.2420153-.3872617.5638976-.7018073.9656467-.9438226.4016563-.2420153.8930235-.363023,1.4738232-.363023.9002673,0,1.6263133.2709903,2.1781379.8131566.5518247.5420735.8276441,1.3939563.8276441,2.5556484Z" style="fill:#f04d00; stroke-width:0px;"></path>
+            <path d="M38.480251,8.625441c.2420153,0,.4404753.0750378.59538.2250204.1549047.1500755.232357.3461209.232357.5881362s-.0774523.4380607-.232357.5881362c-.1549047.1499826-.3533647.2250204-.59538.2250204s-.4404753-.0750378-.59538-.2250204c-.1549047-.1500755-.2322641-.3461209-.2322641-.5881362s.0773595-.4380607.2322641-.5881362c.1549047-.1499826.3533647-.2250204.59538-.2250204Z" style="fill:#f04d00; stroke-width:0px;"></path>
+            <path d="M43.6497763,10.2517543c-.7163877,0-1.3456646-.1597338-1.8877381-.4792015s-.9632321-.7671867-1.2632903-1.3431572c-.300151-.5759705-.4501336-1.2367299-.4501336-1.9820925s.1523972-1.4037075.4573774-1.9748488.7332897-1.0140312,1.2851144-1.3286697c.5517318-.3146385,1.1858379-.4718649,1.9022256-.4718649.8711994,0,1.5900017.2322641,2.1563138.6969781.5663121.4646211.9220914,1.1035564,1.0673377,1.9167131h-1.2052475c-.1161785-.4742795-.3581938-.8518828-.726046-1.1326243s-.8131566-.4210658-1.3359135-.4210658c-.7067293,0-1.2802852.2516736-1.7207605.7550209-.4404753.5034402-.6606665,1.156863-.6606665,1.9603613,0,.8131566.2201912,1.4738232.6606665,1.9820925s1.0140312.7623576,1.7207605.7623576c.5420735,0,.9970363-.1404172,1.3649813-.4211587.3678521-.2806486.6050383-.6679103.7114656-1.1615993h1.19076c-.1549047.822815-.5179277,1.468994-1.089069,1.9385372-.5711413.4694503-1.2971873.7042219-2.1781379.7042219Z" style="fill:#f04d00; stroke-width:0px;"></path>
+            <path d="M48.3400073,8.4366394c-.3098093-.5711413-.4646211-1.2293933-.4646211-1.9748488,0-.7453626.1548118-1.4036146.4646211-1.9748488.3098093-.5711413.7430409-1.0164458,1.2996019-1.3359135.5566538-.3193748,1.1931746-.4791086,1.9095622-.4791086.7162948,0,1.3528155.1597338,1.9094693.4791086.5566538.3194677.9897925.7647721,1.2996019,1.3359135.3098093.5712342.4646211,1.2294861.4646211,1.9748488,0,.7454555-.1548118,1.4037075-.4646211,1.9748488s-.742948,1.0164458-1.2996019,1.3359135-1.1931746.4792015-1.9094693.4792015c-.7163877,0-1.3529084-.1597338-1.9095622-.4792015-.556561-.3194677-.9897925-.7647721-1.2996019-1.3359135ZM53.6982415,7.8703272c.2032892-.4162366.3048873-.8857798.3048873-1.4085366s-.1015981-.9922071-.3048873-1.4085366c-.2032892-.4162366-.4912744-.7405335-.8640486-.9728905-.3726813-.2322641-.8009909-.3484426-1.2850215-.3484426s-.9124331.1161785-1.2851144.3484426c-.3726813.232357-.6607594.5566538-.8640486.9728905-.2032892.4163295-.3048873.8857798-.3048873,1.4085366s.1015981.9923.3048873,1.4085366c.2032892.4163295.4913673.7406263.8640486.9728905.3726813.232357.8010837.3485355,1.2851144.3485355s.9123402-.1161785,1.2850215-.3485355c.3727742-.2322641.6607594-.556561.8640486-.9728905Z" style="fill:#f04d00; stroke-width:0px;"></path>
+          </svg></div>
+      </div>
+    </div>
+    <div class="invoice-padding bottom-black">
+      <div class="text-color-white text-center">All invoices should be paid in full within two months of invoice</div>
+    </div>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=66062a8b5e1b01c5af4bb2a9" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Function to calculate the sum of numbers in the #add element
+        function calculateSum() {
+            const addElement = document.getElementById('add');
+            const hoursElement = document.getElementById('hours');
+            // Get all <p> elements within #add
+            const paragraphs = addElement.querySelectorAll('p');
+            // Initialize sum
+            let sum = 0;
+            // Loop through each <p> element and sum up the numbers
+            paragraphs.forEach(paragraph => {
+                // Parse the text content of each <p> as float
+                const number = parseFloat(paragraph.textContent.trim());
+                // Add to sum if it's a valid number
+                if (!isNaN(number)) {
+                    sum += number;
+                }
+            });
+            // Set the sum to the #hours element
+            hoursElement.textContent = sum.toFixed(2); // Adjust toFixed for decimal places as needed
+        }
+        // Calculate the sum on page load
+        calculateSum();
+    });
+</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Function to calculate the sum of elements with class 'tag'
+        function calculateSum() {
+            const tagElements = document.querySelectorAll('.tag');
+            let sum = 0;
+            tagElements.forEach(element => {
+                const value = parseFloat(element.textContent) || 0;
+                sum += value;
+            });
+            // Set the sum to the element with ID 'finalprice'
+            document.getElementById('finalprice').textContent = sum.toFixed(2); // Adjust toFixed for decimal places as needed
+        }
+        // Calculate the sum on page load
+        calculateSum();
+    });
+</script>
+  <script>
+    function formatMoney() {
+        const moneyElements = document.querySelectorAll('.money');
+        moneyElements.forEach(element => {
+            let value = parseFloat(element.textContent.replace(/[^0-9.-]+/g,""));
+            if (!isNaN(value)) {
+                element.textContent = value.toLocaleString('en-US', {
+                    style: 'currency',
+                    currency: 'USD',
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                });
+            }
+        });
+    }
+    document.addEventListener('DOMContentLoaded', formatMoney);
+</script>
+  <script>
+    document.getElementById('download').addEventListener('click', () => {
+        const { jsPDF } = window.jspdf;
+        // Get the client name
+        const clientName = document.getElementById('clientname').textContent.trim().replace(/\s+/g, '');
+        // Get the current date
+        const date = new Date();
+        const formattedDate = `${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()}`;
+        // Generate the filename
+        const filename = `${clientName}_invoice_${formattedDate}.pdf`;
+        // Set the desired PDF width in pixels
+        const pdfWidth = 1000;
+        // Capture the content as canvas
+        html2canvas(document.querySelector('#content'), {
+            scale: 1 // Use scale 1 to get the actual size
+        }).then(canvas => {
+            const imgData = canvas.toDataURL('image/png');
+            // Calculate the height based on the fixed width
+            const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+            // Create the PDF with the fixed width and dynamic height
+            const pdf = new jsPDF('l', 'px', [pdfWidth, pdfHeight]);
+            pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+            pdf.save(filename);
+        });
+    });
+</script>
+</body>
+</html>
