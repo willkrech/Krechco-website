@@ -1,0 +1,71 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Settings {
+  id Int @id @default(1)
+
+  heroHeadline String @default("UX/UI Designer + Developer")
+  heroImageUrl String @default("")
+  heroTag1     String @default("")
+  heroTag2     String @default("")
+  heroTag3     String @default("")
+
+  aboutTag     String @default("")
+  aboutHeading String @default("")
+  aboutText    String @default("")
+  aboutImage1Url String @default("")
+  aboutImage2Url String @default("")
+
+  videoUrl     String @default("")
+  videoWebmUrl String @default("")
+  videoPosterUrl String @default("")
+
+  footerName       String @default("")
+  footerRole       String @default("")
+  footerPhotoUrl   String @default("")
+  footerBlurb      String @default("")
+  footerPhone      String @default("")
+  footerEmail      String @default("")
+  footerLinkedin   String @default("")
+  footerInstagram  String @default("")
+}
+
+model Testimonial {
+  id     Int    @id @default(autoincrement())
+  quote  String
+  name   String
+  title  String
+  order  Int    @default(0)
+}
+
+model Service {
+  id    Int    @id @default(autoincrement())
+  name  String
+  order Int    @default(0)
+}
+
+model Project {
+  id               Int      @id @default(autoincrement())
+  slug             String   @unique
+  clientName       String
+  category         String   @default("")
+  thumbnailUrl     String   @default("")
+  badgeUrl         String   @default("")
+  externalUrl      String   @default("")
+  hasCaseStudy     Boolean  @default(false)
+  caseStudyIntro   String   @default("")
+  caseStudyContent String   @default("")
+  caseStudyTimeframe String @default("")
+  caseStudyRole      String @default("")
+  caseStudyScope     String @default("")
+  visible          Boolean  @default(true)
+  order            Int      @default(0)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
